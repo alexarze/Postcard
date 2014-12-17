@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var sendMessageButton: UIButton!
+    @IBOutlet weak var showAlertSwitch: UISwitch!
     
     
     override func viewDidLoad() {
@@ -37,11 +38,13 @@ class ViewController: UIViewController {
         
         sendMessageButton.setTitle("Sent!", forState: UIControlState.Normal)
         
-        let alert = UIAlertController(title: "Hello World!", message: "You've sent a message!", preferredStyle: UIAlertControllerStyle.Alert)
+        if showAlertSwitch.on == true{
+            let alert = UIAlertController(title: "Hello World!", message: "You've sent a message!", preferredStyle: UIAlertControllerStyle.Alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
 }
