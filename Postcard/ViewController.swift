@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var enterMessageTextField: UITextField!
+    @IBOutlet weak var enterNameTextField: UITextField!
+    @IBOutlet weak var sendMessageButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +25,24 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
+    @IBAction func sendMessageButtonPressed(sender: UIButton) {
+        messageLabel.hidden = false
+        messageLabel.text = enterMessageTextField.text
+        messageLabel.textColor = UIColor.redColor()
+        
+        enterMessageTextField.text = ""
+        enterNameTextField.text = ""
+        
+        sendMessageButton.setTitle("Sent!", forState: UIControlState.Normal)
+        
+        let alert = UIAlertController(title: "Hello World!", message: "You've sent a message!", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
 }
 
