@@ -61,25 +61,25 @@
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWT-ei-TNC">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="72" width="340" height="100"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJ5-xo-qaO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mJ5-xo-qaO">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="288" width="340" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Psu-YI-lgr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Psu-YI-lgr">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="326" width="340" height="30"/>
                                 </variation>
@@ -119,6 +119,15 @@
                                     <rect key="frame" x="107" y="254" width="84" height="21"/>
                                 </variation>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF3-Tx-Qd3">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="180" width="232" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -131,6 +140,7 @@
                                 <exclude reference="zgV-o9-Atx"/>
                                 <exclude reference="DMf-JG-ya9"/>
                                 <exclude reference="yGd-oE-DkN"/>
+                                <exclude reference="gF3-Tx-Qd3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -142,6 +152,7 @@
                                 <include reference="zgV-o9-Atx"/>
                                 <include reference="DMf-JG-ya9"/>
                                 <include reference="yGd-oE-DkN"/>
+                                <include reference="gF3-Tx-Qd3"/>
                             </mask>
                         </variation>
                     </view>
@@ -149,6 +160,7 @@
                         <outlet property="enterMessageTextField" destination="mJ5-xo-qaO" id="5nj-7y-XiB"/>
                         <outlet property="enterNameTextField" destination="Psu-YI-lgr" id="8Rm-5i-15i"/>
                         <outlet property="messageLabel" destination="pWT-ei-TNC" id="Hm4-ei-m3P"/>
+                        <outlet property="nameLabel" destination="gF3-Tx-Qd3" id="azY-ZD-5sv"/>
                         <outlet property="sendMessageButton" destination="n2o-fY-AFh" id="YRW-AT-Nbb"/>
                         <outlet property="showAlertSwitch" destination="DMf-JG-ya9" id="4R6-x5-Dk4"/>
                     </connections>
@@ -173,7 +185,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emT-iR-a08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124.5" y="337"/>
+            <point key="canvasLocation" x="268.5" y="337"/>
         </scene>
     </scenes>
     <resources>
