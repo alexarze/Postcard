@@ -17,9 +17,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var showAlertSwitch: UISwitch!
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var barcelonaCell: UITableViewCell!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
